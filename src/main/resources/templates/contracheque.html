@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>contracheque</title>
+
+    <style type="text/css">
+    	* {
+			color:black;
+		}
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+            <div>
+                <p>Olá, <span th:text="${nomeSocial}"></span>! Tudo bem? O seu contracheque de competência
+                    <b><span th:text="${competencia}"></span></b> foi fechado! Segue as informações: </p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th style="padding-left: 5rem;">Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Total de horas trabalhadas: </td>
+                        <td style="padding-left: 5rem;"><span th:text="${totalDeHoras}"></span>Hrs</td>
+                    </tr>
+                    <tr>
+                        <td>Hora salário: </td>
+                        <td style="padding-left: 5rem;">R$ <span th:text="${horaSalario}"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Valor total: </td>
+                        <td style="padding-left: 5rem;">R$ <span th:text="${valorTotal}"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Atenciosamente, Equipe RH Control.</p>
+        </div>
+    </section>
+</body>
+
+</html>
